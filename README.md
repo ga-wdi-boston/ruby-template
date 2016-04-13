@@ -50,6 +50,12 @@ List additional related resources such as videos, blog posts and official docume
 - Item 2
 - Item 3
 
+## Tasks
+
+Developers should run these often!
+
+-   `rake test`: runs any automated tests (or `bundle exec rake test`)
+
 ## [License](LICENSE)
 
 Source code distributed under the MIT license. Text and other assets copyright
