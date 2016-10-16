@@ -2,63 +2,38 @@
 
 # ruby-template
 
-## Objectives
+## Updating Dependencies
 
-By the end of this lesson, students should be able to:
+At the beginning of each cohort:
 
--   Objective 1
--   Objective 2
--   Objective 3
+-   Update ruby verison in [`.ruby-version`](.ruby-version)
+-   Update [`Gemfile`](Gemfile):
+    -   Update ruby version.
+    -   Find updated versions of gems referenced from Gemfile.
+    -   Update semantic versions in Gemfile as appropriate.
+-   `bundle update`
+-   `bin/rake # runs both nag and test`
 
-## Instructions
+Fix errors and conflicts as necessary.
 
-Include explicit step-by-step instructions about the goals of the assignment,
- and how to run the code.
+## Structure
 
-Make sure to wrap section of code in appropriate markdown like `ls -al`,
- and denote the language as below for longer sections:
+Dependencies are stored in [`Gemfile`](Gemfile).
 
-```ruby
-x = 2
-y = 3
-z = x + y
-```
+Do not configure `bin/rake` tasks directly in [`Rakefile`](Rakefile). Instead,
+store tasks in the [`lib/tasks`](lib/tasks) directory.  Task aliases should go
+in Rakefile to ensure the aliased tasks are already loaded.
 
-### Demonstration
-
-Developers follow the consultant's explanations
-
-### Code along
-
-Developers write code with the consultant
-
-### Lab
-
-Developers work in their squads to write code.
-
-## Bonus (Optional Section)
-
-If you're looking for extra challenge or practice once you've completed the
- above, try to...
-
-## Notes
-
-Gotcha's and extra information
-
-## Additional Resources
-
-List additional related resources such as videos, blog posts,
- and official documentation.
-
--   Item 1
--   Item 2
--   Item 3
+Developers should store ruby files in [`lib`](lib), or perhaps a subdirectory.
+If a command line script is needed, it should go in [`bin`](bin).
 
 ## Tasks
 
 Developers should run these often!
 
--   `rake test`: runs any automated tests (or `bundle exec rake test`)
+-   `bin/rake nag`  (or `bundle exec rake test`):
+    runs code quality analysis tools on your code and complains.
+-   `bin/rake test` (or `bundle exec rake test`): runs automated tests
 
 ## [License](LICENSE)
 
