@@ -31,9 +31,9 @@ If a command line script is needed, it should go in [`bin`](bin).
 
 Developers should run these often!
 
--   `bin/rake nag`  (or `bundle exec rake test`):
+-   `bin/rake nag`  (or `bundle exec rake nag`):
     runs code quality analysis tools on your code and complains.
--   `bin/rake test` (or `bundle exec rake test`): runs automated tests
+-   `bin/rake test` (or `bundle exec rake test`): runs automated tests.
 
 ## [License](LICENSE)
 
