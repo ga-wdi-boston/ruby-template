@@ -22,7 +22,7 @@ Dependencies are stored in [`Gemfile`](Gemfile).
 
 Do not configure `bin/rake` tasks directly in [`Rakefile`](Rakefile). Instead,
 store tasks in the [`lib/tasks`](lib/tasks) directory.  Task aliases should go
-in `lib/tasks/aliases.rake`(lib/tasks/aliases.rake).
+in [`lib/tasks/aliases.rake`](lib/tasks/aliases.rake).
 
 Developers should store ruby files in [`lib`](lib), or perhaps a subdirectory.
 If a command line script is needed, it should go in [`bin`](bin).
