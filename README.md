@@ -22,7 +22,7 @@ Dependencies are stored in [`Gemfile`](Gemfile).
 
 Do not configure `bin/rake` tasks directly in [`Rakefile`](Rakefile). Instead,
 store tasks in the [`lib/tasks`](lib/tasks) directory.  Task aliases should go
-in Rakefile to ensure the aliased tasks are already loaded.
+in [`lib/tasks/aliases.rake`](lib/tasks/aliases.rake).
 
 Developers should store ruby files in [`lib`](lib), or perhaps a subdirectory.
 If a command line script is needed, it should go in [`bin`](bin).
@@ -31,9 +31,10 @@ If a command line script is needed, it should go in [`bin`](bin).
 
 Developers should run these often!
 
--   `bin/rake nag`  (or `bundle exec rake test`):
+-   `bin/rake nag`  (or `bundle exec rake nag`):
     runs code quality analysis tools on your code and complains.
--   `bin/rake test` (or `bundle exec rake test`): runs automated tests
+-   `bin/rake test` (or `bundle exec rake test`): runs automated tests.
+-   `bin/rake` will run both `nag` and `test`
 
 ## [License](LICENSE)
 
