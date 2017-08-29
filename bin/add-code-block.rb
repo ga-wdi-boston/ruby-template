@@ -9,7 +9,7 @@ File.open infile_name do |markdown|
   in_code_block = false
   markdown.each do |line|
     if in_code_block
-      in_code_block = !(line =~ /<!-- end code block -->/)
+      in_code_block = (line !~ /<!-- end code block -->/)
       unless in_code_block
         outfile.write "```\n"
         outfile.write line
