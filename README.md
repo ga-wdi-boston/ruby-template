@@ -27,41 +27,6 @@ in [`lib/tasks/aliases.rake`](lib/tasks/aliases.rake).
 Developers should store ruby files in [`lib`](lib), or perhaps a subdirectory.
 If a command line script is needed, it should go in [`bin`](bin).
 
-## Code blocks
-
-With this in the markdown:
-
-&lt;!-- start code block file="lib/example.rb" --&gt;
-
-This gets replaced with the contents of `lib/example.rb`
-
-&lt;!-- end code block --&gt;
-
-running:
-
-```sh
-cp README.md README.bak
-bin/add-code-block.rb README.bak >README.md
-```
-
-produces:
-
-<!-- start code block file="lib/example.rb" -->
-```rb
-# frozen_string_literal: true
-
-# An example class
-class Example
-  attr_accessor :value
-  def initialize(value = 0)
-    @value = value
-  end
-end
-```
-<!-- end code block -->
-
-Check the markdown source to see what happens.
-
 ## Tasks
 
 Developers should run these often!
